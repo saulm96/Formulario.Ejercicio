@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ladronzuelos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -20,8 +21,67 @@
                 <input type="time" name="hora" id="hora" value="00:00" required><br>
 
                 <label for="color">Color de la bicicleta:</label>
-                <input type="color">
+                <input type="color" required><br>
+                
+                <label for="prange">Rango de precio:</label>
+                <input type="range" name="prange" id="prange" minlength="100" maxlength="1000" step="10" required><br>
+
+                <label for="biketype">Tipo de bicicleta:</label>
+                <select name="biketype" id="biketype" required>
+                    <optgroup label="Paseo">
+                        <option value="señorial">Señorial</option>
+                        <option value="anti-plebeyos">Anti-plebeyos</option>
+                        <option value="por-encima-del-hombro">PorEncimaDelHombro</option>
+                    </optgroup>
+                    <optgroup label="Montaña">
+                        <option value="gamusinos">Gamusinos</option>
+                        <option value="hueleflores-premium">Hueleflores premium</option>
+                        <option value="fango-lover">Fango lover</option>
+                    </optgroup>
+                    <optgroup label="Carreras">
+                        <option value="metroymedio">Metroymedio</option>
+                        <option value="3-de-la-tarde-fluorescente-edition">3 de la tarde. Fluorescente edition</option>
+                        <option value="grupitors">Grupitors</option>
+                    </optgroup>
+                </select><br>
+                
+                <label for="accesorios">Accesorios:</label><br>
+                <select name="selector" id="accesorios" multiple required>
+                    <option value="ruedines">Ruedines</option>
+                    <option value="pegatines">Pegatinas</option>
+                    <option value="cestita">Cestita</option>
+                    <option value="bomba-de-aire">Bomba de aire</option>
+                    <option value="timbre">Timbre</option>
+                    <option value="fooc">Foco</option>
+                </select><br>
+                
+                <input type="text" list="marca" placeholder="¿Cuál era la marca?">
+                <datalist id="marca" required>
+                    <option value="Specialized">
+                    <option value="Trek">
+                    <option value="Merida">
+                    <option value="Scott">
+                    <option value="Giant">
+                    <option value="Cube">
+                    <option value="Lapierre">
+                    <option value="Orbea">
+                    <option value="Cannondale">
+                    <option value="Bmc">
+                    <option value="Canyon">
+                    <option value="Look">
+                    <option value="Protek">
+                    <option value="Megamo">
+                    <option value="Pinarello">
+                    <option value="Bianchi">
+                    <option value="BH">
+                    <option value="Factor">
+                    <option value="Ghost">
+                    <option value="Cervélo">
+                    <option value="Argon">
+                </datalist>
             </form>
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
         </fieldset>
 
     </main>
